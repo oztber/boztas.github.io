@@ -19,10 +19,9 @@ kotlin {
     sourceSets {
         val jsMain by getting {
             dependencies {
-                implementation(project.dependencies.enforcedPlatform("org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:2025.7.3"))
-                implementation("org.jetbrains.kotlin-wrappers:kotlin-react")
-                implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom")
-                implementation("org.jetbrains.kotlin-wrappers:kotlin-emotion")
+                implementation(kotlinWrappers.react)
+                implementation(kotlinWrappers.reactDom)
+                implementation(kotlinWrappers.emotion.styled)
             }
         }
     }
