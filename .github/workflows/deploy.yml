@@ -24,7 +24,7 @@ jobs:
         run: ./gradlew jsBrowserDistribution
 
       - name: Find dist folder
-        run: find build/dist -type d
+        run: find build -type d || true
 
       - uses: actions/upload-pages-artifact@v3
         with:
